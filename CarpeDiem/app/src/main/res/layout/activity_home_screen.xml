@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".HomeScreen">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:id="@+id/horizontalCenterBlock"
+        />
+
+    <FrameLayout
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:id="@+id/verticalCenterBlock"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/policeButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:id="@+id/aboveButton"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/fireDeptHelp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:id="@+id/belowButton"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:id="@+id/bottomBuffer"
+        />
+
+    <TextView
+        android:layout_width="410dp"
+        android:layout_height="65dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:text="Carpe Diem"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="40dp"
+
+        android:onClick="infoClick"
+        android:id="@+id/textTitle"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/textTitle"
+        app:layout_constraintBottom_toTopOf="@+id/aboveButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:text="Click the needed emergency service below. For non-emergencies, click 'utility'"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/belowButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:text="First responder login"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+
+        android:id="@+id/firstResponderLoginText"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/horizontalCenterBlock"
+        app:layout_constraintRight_toLeftOf="@+id/verticalCenterBlock"
+
+        android:text="Police"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:textSize="24dp"
+
+        android:background="@android:color/holo_blue_bright"
+        style="?android:attr/borderlessButtonStyle"
+
+        android:onClick="policeClick"
+        android:id="@+id/policeButton"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalCenterBlock"
+        app:layout_constraintLeft_toRightOf="@+id/verticalCenterBlock"
+
+        android:text="Ambulance"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:textSize="24dp"
+
+        android:background="@android:color/holo_red_light"
+        style="?android:attr/borderlessButtonStyle"
+
+        android:onClick="ambulanceClick"
+        android:id="@+id/medicalHelp"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalCenterBlock"
+        app:layout_constraintRight_toLeftOf="@+id/verticalCenterBlock"
+
+        android:text="Fire"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:textSize="24dp"
+
+        android:background="@android:color/holo_red_light"
+        style="?android:attr/borderlessButtonStyle"
+
+        android:onClick="fireClick"
+        android:id="@+id/fireDeptHelp"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalCenterBlock"
+        app:layout_constraintLeft_toRightOf="@+id/verticalCenterBlock"
+
+        android:text="Utility"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:textSize="24dp"
+
+        android:background="#ffff00"
+        style="?android:attr/borderlessButtonStyle"
+
+        android:onClick="utilityClick"
+        android:id="@+id/utilityHelp"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/firstResponderLoginText"
+        app:layout_constraintBottom_toTopOf="@id/bottomBuffer"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:text="Login here"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+
+        android:onClick="login"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
