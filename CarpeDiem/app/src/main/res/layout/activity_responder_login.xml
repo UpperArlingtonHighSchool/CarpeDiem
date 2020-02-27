@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResponderLogin">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:id="@+id/centerHorizontalRow"
+        />
+    <FrameLayout
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:id="@+id/centerVerticalRow"
+        />
+    <FrameLayout
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:id="@+id/rightVerticalRow"
+        />
+    <FrameLayout
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:id="@+id/leftVerticalRow"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/centerHorizontalRow"
+
+        android:id="@+id/oneFourthRow"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintTop_toBottomOf="@id/centerHorizontalRow"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:id="@+id/threeFourthRow"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/oneFourthRow"
+        app:layout_constraintRight_toLeftOf="@+id/centerVerticalRow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/oneFourthRow"
+        app:layout_constraintRight_toLeftOf="@id/centerVerticalRow"
+
+        android:text="Password"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+
+        android:background="@android:color/darker_gray"
+        android:hint="Enter Username"
+
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@id/oneFourthRow"
+        app:layout_constraintLeft_toRightOf="@id/centerVerticalRow"
+        />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/oneFourthRow"
+        app:layout_constraintLeft_toRightOf="@+id/centerVerticalRow"
+
+        android:background="@android:color/darker_gray"
+        android:inputType="textPassword"
+        android:hint="Enter Password"
+
+        android:id="@+id/password"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
